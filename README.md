@@ -8,4 +8,4 @@
 7. using any python environment to import the csv dataset 
 8. run the code which consist of machine learning-deep learning algorithm 
 9. evaluate the accuracy and performce of the model which tells about how well the model is able to predict malicious node
-\............................................................................\
+# \............................................................................\
