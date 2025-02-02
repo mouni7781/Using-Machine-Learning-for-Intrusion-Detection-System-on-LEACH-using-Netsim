@@ -1,4 +1,4 @@
-#Intrusion Detection System using Machine Learning#
+# Intrusion Detection System using Machine Learning
 1)import the netsim file using a netsim standard 13.2 version
 2)open and change the settings of the scenario according to you
 3)run the simulation once and you will the metrics
