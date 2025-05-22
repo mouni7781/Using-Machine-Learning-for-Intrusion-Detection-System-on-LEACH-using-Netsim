@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LTENR"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+	<xs:include schemaLocation="NetSim_Common_type.xsd"/>
+
+	<xs:attributeGroup name="GTPU_PARAMETERS">
+		<xs:attribute name="UPF_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="SMF_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="GNB_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="AMF_IP_ADDRESS" type="xs:string" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="NGAP_PARAMETERS">
+		<xs:attribute name="UPF_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="SMF_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="GNB_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="AMF_IP_ADDRESS" type="xs:string" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="GTPC_PARAMETERS">
+		<xs:attribute name="UPF_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="SMF_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="GNB_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="AMF_IP_ADDRESS" type="xs:string" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="PFCP_PARAMETERS">
+		<xs:attribute name="UPF_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="SMF_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="GNB_IP_ADDRESS" type="xs:string" use="optional"/>
+		<xs:attribute name="AMF_IP_ADDRESS" type="xs:string" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ERROR_MODEL_AND_MCS_SELECTION_PROPERTY">
+		<xs:attribute name="BLER_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ZERO_BLER"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="MCS_SELECTION_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="IDEAL_SHANNON_THEOREM_BASED_RATE"/>
+					<xs:enumeration value="SHANNON_RATE_WITH_ATTENUATION_FACTOR"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ATTENUATION_FACTOR" type="xs:double" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="LTENR_INTERFERENCE_MODEL_PROPERTY">
+		<xs:attribute name="DOWNLINK_INTERFERENCE_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NO_INTERFERENCE"/>
+					<xs:enumeration value="GRADED_DISTANCE_BASED_WYNER_MODEL"/>
+					<xs:enumeration value="EXACT_GEOMETRIC_MODEL"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="OPEN_INTERFERENCE_FILE" type="xs:string" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="LTENR_CHANNEL_MODEL_PROPERTY">
+		<xs:attribute name="OUTDOOR_SCENARIO" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="RURAL_MACRO"/>
+					<xs:enumeration value="URBAN_MACRO"/>
+					<xs:enumeration value="URBAN_MICRO"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="DOWNLINK_INTERFERENCE_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NO_INTERFERENCE"/>
+					<xs:enumeration value="GRADED_DISTANCE_BASED_WYNER_MODEL"/>
+					<xs:enumeration value="EXACT_GEOMETRIC_MODEL"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="OPEN_INTERFERENCE_FILE" type="xs:string" use="optional"/>
+		<xs:attribute name="ATTENUATION_FACTOR" type="xs:double" use="optional"/>
+		<xs:attribute name="INDOOR_SCENARIO" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="INDOOR_OFFICE"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="INDOOR_OFFICE_TYPE" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="MIXED_OFFICE"/>
+					<xs:enumeration value="OPEN_OFFICE"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="FASTFADING_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NONE"/>
+					<xs:enumeration value="AWGN_WITH_RAYLEIGH_FADING"/>
+					<xs:enumeration value="NO_FADING"/>
+					<xs:enumeration value="NO_FADING_MIMO_ARRAY_GAIN"/>
+					<xs:enumeration value="NO_FADING_MIMO_UNIT_GAIN"/>
+					<xs:enumeration value="RAYLEIGH_WITH_EIGEN_BEAMFORMING"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="LOS_NLOS_SELECTION" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="USER_DEFINED"/>
+					<xs:enumeration value="3GPPTR38.901-Table7.4.2-1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="O2I_BUILDING_PENETRATION_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NONE"/>
+					<xs:enumeration value="LOW_LOSS_MODEL"/>
+					<xs:enumeration value="HIGH_LOSS_MODEL"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="PATHLOSS_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NONE"/>
+					<xs:enumeration value="3GPPTR38.901-7.4.1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="SHADOWFADING_STANDARD_DEVIATION" type="xs:string" use="optional"/>
+		<xs:attribute name="COHERENCE_TIME_MS" type="xs:unsignedInt" use="optional"/>
+		<xs:attribute name="SHADOWING_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NONE"/>
+					<xs:enumeration value="LOG_NORMAL"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="SHADOWFADING_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NONE"/>
+					<xs:enumeration value="LOG_NORMAL"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="LOS_PROBABILITY" type="xs:double"/>
+		<xs:attribute name="BUILDINGS_HEIGHT" type="xs:double"/>
+		<xs:attribute name="STREET_WIDTH" type="xs:double"/>
+		<xs:attribute name="AVERAGE_SNR_WINDOW" type="xs:double"/>
+		<xs:attribute name="O2I_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="LOW_LOSS_MODEL"/>
+					<xs:enumeration value="HIGH_LOSS_MODEL"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ADDITIONAL_LOSS_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NONE"/>
+					<xs:enumeration value="MATLAB"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="MATLAB_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="GAS"/>
+					<xs:enumeration value="FOG"/>
+					<xs:enumeration value="RAIN"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="AIRPRESSURE" type="xs:positiveInteger" use="optional"/>
+		<xs:attribute name="RAINRATE" type="xs:integer" use="optional"/>
+		<xs:attribute name="TILTANGLE" type="xs:byte" use="optional"/>
+		<xs:attribute name="TEMPERATURE" type="xs:byte" use="optional"/>
+		<xs:attribute name="ELEVATIONANGLE" type="xs:byte" use="optional"/>
+		<xs:attribute name="WATERDENSITY" type="xs:double" use="optional"/>
+		<xs:attribute name="EXCEEDANCEPERCENTAGEOFRAINFALL" type="xs:double" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="LTENR_ANTENNA_PROPERTY">
+		<xs:attribute name="RX_ANTENNA_COUNT" type="xs:unsignedByte" use="optional"/>
+		<xs:attribute name="TX_ANTENNA_COUNT" type="xs:unsignedByte" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="LTENR_CA_PROPERTY">
+		<xs:attribute name="FREQUENCY_RANGE">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="FR1"/>
+					<xs:enumeration value="FR2"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="OPERATING_BAND" type="xs:string" use="optional"/>
+		<xs:attribute name="Flow_MHz" type="xs:double" use="optional"/>
+		<xs:attribute name="Fhigh_MHz" type="xs:double" use="optional"/>
+		<xs:attribute name="CHANNELBANDWIDTH_MHz" type="xs:double" use="optional"/>
+		<xs:attribute name="GUARDBAND_kHz" type="xs:double" use="optional"/>
+		<xs:attribute name="MU" type="xs:unsignedByte"/>
+		<xs:attribute name="SUBCARRIERSPACING">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[k][H][z][0-9]{1,9}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+
+		<xs:attribute name="CYCLICPREFIX">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NORMAL"/>
+					<xs:enumeration value="EXTENDED"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+
+		<xs:attribute name="SLOT_TYPE">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Mixed"/>
+					<xs:enumeration value="DownLink"/>
+					<xs:enumeration value="UpLink"/>
+					<xs:enumeration value="Downlink"/>
+					<xs:enumeration value="Uplink"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="SYMBOLPERSLOT" type="xs:unsignedByte"/>
+		<xs:attribute name="SLOTPERFRAME" type="xs:unsignedShort"/>
+		<xs:attribute name="SLOTPERSUBFRAME" type="xs:unsignedByte"/>
+		<xs:attribute name="PRBBANDWIDTH">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[k][H][z][0-9]{1,9}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="DL_UL_RATIO">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{0,9}[:][0-9]{0,9}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="SLOTDURATION_US" type="xs:double" use="optional"/>
+		<xs:attribute name="SYMBOLDURATION_US" type="xs:double" use="optional"/>
+		<xs:attribute name="PRBCOUNT" type="xs:unsignedInt" use="optional"/>
+		<xs:attribute name="BANDWIDTH_PART" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Enable"/>
+					<xs:enumeration value="Disable"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="BWP_COUNT" type="xs:integer" use="optional"/>
+
+		<!--FOR advance lte-->
+		<xs:attribute name="RESOURCE_BLOCK_COUNT" type="xs:positiveInteger" use="optional"/>
+		<xs:attribute name="SAMPLING_FREQUENCY" type="xs:float" use="optional"/>
+		<xs:attribute name="OCCUPIED_SUBCARRIER" type="xs:positiveInteger" use="optional"/>
+		<xs:attribute name="GUARD_SUBCARRIER" type="xs:positiveInteger" use="optional"/>
+		<xs:attribute name="FFT_SIZE" type="xs:positiveInteger" use="optional" />
+		<xs:attribute name="CHANNEL_BANDWIDTH" type="xs:float" use="optional" />
+		<xs:attribute name="DL_FREQUENCY_MAX" type="xs:float" use="optional" />
+		<xs:attribute name="DL_FREQUENCY_MIN" type="xs:float" use="optional" />
+		<xs:attribute name="UL_FREQUENCY_MAX" type="xs:float" use="optional" />
+		<xs:attribute name="UL_FREQUENCY_MIN" type="xs:float" use="optional" />
+	</xs:attributeGroup>
+	<xs:attributeGroup name="LTENR_BWP_PROPERTY">
+		<xs:attribute name="BWP_ID" type="xs:integer" use="optional"/>
+		<xs:attribute name="BWP_NAME" type="xs:string" use="optional"/>
+		<xs:attribute name="BWP_MU" type="xs:unsignedByte"/>
+		<xs:attribute name="BWP_SUBCARRIERSPACING">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[k][H][z][0-9]{1,9}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+
+		<xs:attribute name="BWP_CYCLICPREFIX">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NORMAL"/>
+					<xs:enumeration value="EXTENDED"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="BWP_PRBBANDWIDTH">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[k][H][z][0-9]{1,9}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="BWP_SLOTDURATION_US" type="xs:double" use="optional"/>
+		<xs:attribute name="BWP_SYMBOLDURATION_US" type="xs:double" use="optional"/>
+		<xs:attribute name="BWP_PRBCOUNT" type="xs:integer" use="optional"/>
+		<xs:attribute name="BWP_PRBOFFSET" type="xs:integer" use="optional"/>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="LTE_NR_PROPERTY">
+		<xs:attribute name="TYPE">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="UE"/>
+					<xs:enumeration value="GNB"/>
+					<xs:enumeration value="EPC"/>
+					<xs:enumeration value="ENB"/>
+					<xs:enumeration value="RELAY"/>
+					<xs:enumeration value="UPF"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="PDCP_HEADER_COMPRESSION" type="BOOL"/>
+		<xs:attribute name="RRC_UE_MEASUREMENT_REPORT_PERIOD">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{1,9}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="RRC_MIB_PERIOD" type="xs:int" use="optional" />
+		<xs:attribute name="RRC_SIB1_PERIOD" type="xs:int" use="optional" />
+		<xs:attribute name="ASSOCIATED_EPC" type="xs:string" use="optional" />
+
+		<xs:attribute name="ASSOCIATE_AMF" type="xs:string" use="optional" />
+		<xs:attribute name="ASSOCIATE_SMF" type="xs:string" use="optional" />
+		<xs:attribute name="ASSOCIATE_UPF" type="xs:string" use="optional" />
+		<xs:attribute name="PDCP_DISCARD_DELAY_TIMER">
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:enumeration value="50"/>
+					<xs:enumeration value="150"/>
+					<xs:enumeration value="300"/>
+					<xs:enumeration value="500"/>
+					<xs:enumeration value="750"/>
+					<xs:enumeration value="1500"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="PDCP_OUT_OF_ORDER_DELIVERY" type="BOOL"/>
+		<xs:attribute name="PDCP_TREORDERING_DELAY_TIMER" type="xs:double"/>
+		<xs:attribute name="INTERRUPTION_TIME" type="xs:double"/>
+
+		<!-- LTENR-RLC Property -->
+		<xs:attribute name="RLC_MAX_RETX_THRESHOLD" type="xs:string"/>
+		<xs:attribute name="RLC_POLL_PDU" type="xs:string"/>
+		<xs:attribute name="RLC_POLL_BYTE" type="xs:string"/>
+		<xs:attribute name="RLC_T_POLL_RETRANSMIT" type="xs:string"/>
+		<xs:attribute name="RLC_T_REASSEMBLY" type="xs:string"/>
+		<xs:attribute name="RLC_T_STATUS_PROHIBIT" type="xs:string"/>
+
+		<!-- HARQ Property -->
+		<xs:attribute name="HARQ_MODE">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="TRUE"/>
+					<xs:enumeration value="FALSE"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+
+		<xs:attribute name="MAX_HARQ_PROCESS_COUNT">
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:enumeration value="2"/>
+					<xs:enumeration value="4"/>
+					<xs:enumeration value="6"/>
+					<xs:enumeration value="8"/>
+					<xs:enumeration value="10"/>
+					<xs:enumeration value="12"/>
+					<xs:enumeration value="16"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+
+		<xs:attribute name="MAX_CBG_PER_TB">
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:enumeration value="1"/>
+					<xs:enumeration value="2"/>
+					<xs:enumeration value="4"/>
+					<xs:enumeration value="6"/>
+					<xs:enumeration value="8"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+
+		<!--LTENR-PHY Property-->
+		<xs:attribute name="DUPLEX_MODE">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="TDD"/>
+					<xs:enumeration value="FDD"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+
+		<xs:attribute name="CA_TYPE">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="INTRA_BAND_CONTIGUOUS_CA"/>
+					<xs:enumeration value="INTRA_BAND_NONCONTIGUOUS_CA"/>
+					<xs:enumeration value="INTER_BAND_CA"/>
+					<xs:enumeration value="SINGLE_BAND"/>
+
+					<!-- For advamce lte-->
+					<xs:enumeration value="INTER_BAND_NONCONTIGUOUS_CA"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+
+		<xs:attribute name="FRAMEDURATION_MS" type="xs:unsignedByte" fixed="10"/>
+		<xs:attribute name="SUBFRAMEDURATION_MS" type="xs:unsignedByte" fixed="1"/>
+		<xs:attribute name="NUMSUBCARRIERPERPRB" type="xs:unsignedByte" fixed="12"/>
+		<xs:attribute name="SERIES_3GPP" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="36"/>
+					<xs:enumeration value="38"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+
+		<xs:attribute name="DOWNLINK_MIMO_LAYER_COUNT" type="xs:nonNegativeInteger" use="optional"/>
+		<xs:attribute name="UPLINK_MIMO_LAYER_COUNT" type="xs:nonNegativeInteger" use="optional"/>
+		<xs:attribute name="BEAMFORMING_GAIN" type="xs:nonNegativeInteger" use="optional"/>
+		<xs:attribute name="GNB_HEIGHT" type="xs:double" use="optional"/>
+		<xs:attribute name="UE_HEIGHT" type="xs:double" use="optional"/>
+		<xs:attribute name="BANDWIDTH_PART" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Enable"/>
+					<xs:enumeration value="Disable"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="BWP_UE">
+		<xs:attribute name="DEFAULT_BWP_ID" type="xs:integer" use="optional"/>
+		<xs:attribute name="FIRST_ACTIVE_BWP_ID" type="xs:integer" use="optional"/>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="LTENR_PDSCH_CONFIG">
+		<xs:attribute name="MCS_TABLE" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="QAM256"/>
+					<xs:enumeration value="QAM64"/>
+					<xs:enumeration value="QAM64LOWSE"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="XOVERHEAD" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="XOH0"/>
+					<xs:enumeration value="XOH6"/>
+					<xs:enumeration value="XOH12"/>
+					<xs:enumeration value="XOH18"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="LTENR_PUSCH_CONFIG">
+		<xs:attribute name="MCS_TABLE" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="QAM256"/>
+					<xs:enumeration value="QAM64"/>
+					<xs:enumeration value="QAM64LOWSE"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="TRANSFORM_PRECODING" type="TwoOption"/>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="LTENR_ANTENNA_MODEL">
+		<xs:attribute name="ISOTROPIC_ANTENNA" type="BOOL"/>
+		<xs:attribute name="OMNIDIRECTIONAL_ANTENNA" type="BOOL"/>
+		<xs:attribute name="ANTENNA_PLANES" type="xs:nonNegativeInteger"/>
+		<xs:attribute name="ARRAY_ELEMENTS" type="xs:nonNegativeInteger"/>
+		<xs:attribute name="HORIZONTAL_SPACING" type="xs:double"/>
+		<xs:attribute name="VERTICAL_SPACING" type="xs:double"/>
+		<xs:attribute name="HALFPOWER_BEAMWIDTH" type="xs:nonNegativeInteger"/>
+		<xs:attribute name="MAX_DIRECTIONAL_GAIN" type="xs:nonNegativeInteger"/>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="LTENR_FASTFADING_MODEL">
+		<xs:attribute name="DIRECT_BEAMING" type="BOOL"/>
+		<xs:attribute name="UPDATE_INTERVAL" type="xs:double"/>
+		<xs:attribute name="BEAMFORMING_METHOD" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="BEAMSEARCH_METHOD"/>
+					<xs:enumeration value="LONGTERM_COVARIANCE_MATRIX"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="LTENR_BLOCKAGE_MODEL">
+		<xs:attribute name="BLOCKAGE" type="BOOL"/>
+		<xs:attribute name="MODEL_TYPE" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="BLOCKAGE_MODEL_A"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="BLOCKER_SPEED" type="xs:double"/>
+		<xs:attribute name="SELFBLOCKING_REGIONS" type="xs:nonNegativeInteger"/>
+		<xs:attribute name="NONSELFBLOCKING_REGIONS" type="xs:nonNegativeInteger"/>
+		<xs:attribute name="ORIENTATION_MODE" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="PORTRAIT_MODE"/>
+					<xs:enumeration value="LANDSCAPE_MODE"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="LTENR_PROPAGATION_MODEL">
+		<xs:attribute name="OUTDOOR_SCENARIO" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="RURAL_MACRO"/>
+					<xs:enumeration value="URBAN_MACRO"/>
+					<xs:enumeration value="URBAN_MICRO"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="INDOOR_SCENARIO" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="INDOOR_OFFICE"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="INDOOR_OFFICE_TYPE" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="MIXED_OFFICE"/>
+					<xs:enumeration value="OPEN_OFFICE"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="BUILDINGS_HEIGHT" type="xs:double"/>
+		<xs:attribute name="STREET_WIDTH" type="xs:double"/>
+		<xs:attribute name="AVERAGE_SNR_WINDOW" type="xs:double"/>
+		<xs:attribute name="O2I_MODEL" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="LOW_LOSS_MODEL"/>
+					<xs:enumeration value="HIGH_LOSS_MODEL"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="LTENR_CHANNEL_CHARACTERISTICS">
+		<xs:attribute name="CHANNEL_CHARACTERISTICS" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NO_PATHLOSS"/>
+					<xs:enumeration value="PATHLOSS_ONLY"/>
+					<xs:enumeration value="PATHLOSS_WITH_SHADOWFADING"/>
+					<xs:enumeration value="PATHLOSS_WITH_SHADOWFADING_O2ILOSS"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="LOS_MODE" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="TR38_901_STANDARD"/>
+					<xs:enumeration value="USER_DEFINED"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="LOS_PROBABILITY" type="xs:double"/>
+	</xs:attributeGroup>
+
+	<xs:group name="LTE_NR_APP">
+		<xs:sequence>
+			<xs:element name="GTP_U" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attributeGroup ref="GTPU_PARAMETERS"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="NGAP" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attributeGroup ref="NGAP_PARAMETERS"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GTP_C" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attributeGroup ref="GTPC_PARAMETERS"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PFCP" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attributeGroup ref="PFCP_PARAMETERS"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:group name="LTE_NR_ELEMENT">
+		<xs:sequence>
+			<xs:element name="CA" minOccurs="0" maxOccurs="16">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="BWP" minOccurs="0" maxOccurs="32">
+							<xs:complexType>
+								<xs:attributeGroup ref ="LTENR_BWP_PROPERTY"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attributeGroup ref ="LTENR_CA_PROPERTY"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="BWP" minOccurs="0" maxOccurs="16">
+				<xs:complexType>
+					<xs:attributeGroup ref ="BWP_UE"/>
+				</xs:complexType>
+			</xs:element>
+			 <xs:element name="ANTENNA" minOccurs="0" maxOccurs="16">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_ANTENNA_PROPERTY"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PDSCH_CONFIG" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_PDSCH_CONFIG"/>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="PUSCH_CONFIG" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_PUSCH_CONFIG"/>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="CSIREPORT_CONFIG" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="CQI_TABLE">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="TABLE1"/>
+								<xs:enumeration value="TABLE2"/>
+								<xs:enumeration value="TABLE3"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CHANNEL_MODEL" minOccurs="0" maxOccurs="16">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_CHANNEL_MODEL_PROPERTY"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="INTERFERENCE_MODEL" minOccurs="0" maxOccurs="16">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_INTERFERENCE_MODEL_PROPERTY"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ERROR_MODEL_AND_MCS_SELECTION" minOccurs="0" maxOccurs="16">
+				<xs:complexType>
+					<xs:attributeGroup ref ="ERROR_MODEL_AND_MCS_SELECTION_PROPERTY"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ANTENNA_MODEL" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_ANTENNA_MODEL"/>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="FASTFADING_MODEL" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_FASTFADING_MODEL"/>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="BLOCKAGE_MODEL" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_BLOCKAGE_MODEL"/>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="PROPAGATION_MODEL" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_PROPAGATION_MODEL"/>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:element name="CHANNEL_CHARACTERISTICS" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attributeGroup ref ="LTENR_CHANNEL_CHARACTERISTICS"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+
+</xs:schema>

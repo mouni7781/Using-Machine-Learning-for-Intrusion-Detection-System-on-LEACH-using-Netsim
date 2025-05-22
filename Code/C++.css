@@ -1,0 +1,6 @@
+#include <cstdlib>
+
+int main() {
+    system("python your_script.py");
+    return 0;
+}

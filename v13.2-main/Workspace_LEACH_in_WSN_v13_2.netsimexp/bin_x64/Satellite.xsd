@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SATELLITE"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:include schemaLocation="NetSim_Common_type.xsd"/>
+  
+  <xs:attributeGroup name ="FRAME_BANDWIDTH_GROUP">
+    <xs:attribute name="FRAME_BANDWIDTH_HZ" type="xs:double"/>
+    <xs:attribute name="FRAME_BANDWIDTH_KHZ" type="xs:double"/>
+    <xs:attribute name="FRAME_BANDWIDTH_MHZ" type="xs:double"/>
+    <xs:attribute name="FRAME_BANDWIDTH_GHZ" type="xs:double"/>
+  </xs:attributeGroup>
+
+  <xs:attributeGroup name="SATELLITE_PHY_PROPERTY">
+    <!--<xs:attribute name="DEVICE_TYPE">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="USER_TERMINAL"/>
+          <xs:enumeration value="SATELLITE"/>
+          <xs:enumeration value="SATELLITE_GATEWAY"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>-->
+    <xs:attribute name="TX_ANTENNA_GAIN_DB" use="optional" type="xs:unsignedInt"/>
+    <xs:attribute name="RX_ANTENNA_GAIN_DB" use="optional" type="xs:unsignedInt"/>
+    <xs:attribute name="ANTENNA_GAIN_TO_NOISE_TEMPERATURE_DBK" use="optional" type="xs:double"/>
+  </xs:attributeGroup>
+  
+  <xs:attributeGroup name="SATELLITE_MAC_PROPERTY">
+    <xs:attribute name="DEVICE_TYPE">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="USER_TERMINAL"/>
+          <xs:enumeration value="SATELLITE"/>
+          <xs:enumeration value="SATELLITE_GATEWAY"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="GATEWAY" use="optional" type="xs:string"/>
+    <xs:attribute name="BEAM_ID" use="optional" type="xs:positiveInteger" fixed="1"/>
+    <xs:attributeGroup ref="BUFFER_SIZE"/>
+  </xs:attributeGroup>
+  
+  <xs:attributeGroup name="FORWARD_LINK_PROPERTY">
+    <xs:attribute name ="ACCESS_PROTOCOL" use="required" fixed="TDMA" type="xs:string"/>
+    <xs:attribute name="BAND" use="required" fixed="KU" type="xs:string"/>
+    <xs:attribute name="BASE_FREQUENCY_GHZ" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:double">
+          <xs:maxInclusive value="18.0"/>
+          <xs:minInclusive value="12.0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="CARRIER_BANDWIDTH_HZ" type="xs:double" use="required"/>
+    <xs:attribute name="ROLLOFF_FACTOR" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:maxInclusive value="1.0"/>
+          <xs:minInclusive value="0.0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="SPACING_FACTOR" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:maxInclusive value="1.0"/>
+          <xs:minInclusive value="0.0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="SLOT_COUNT_IN_FRAME" use="required" type="xs:positiveInteger"/>
+    <xs:attribute name="FRAME_COUNT_IN_SUPERFRAME" use="required" type="xs:integer"/>
+    <xs:attributeGroup ref="FRAME_BANDWIDTH_GROUP"/>
+
+    <xs:attribute name="SYMBOL_PER_SLOT" use="required" type="xs:integer"/>
+    <xs:attribute name="PILOT_BLOCK_SIZE_symbols" use="required" type="xs:integer"/>
+    <xs:attribute name="PILOT_BLOCK_INTERVAL_slots" use="required" type="xs:integer"/>
+    <xs:attribute name="PLHEARDER_slots" use="required" type="xs:integer"/>
+    <xs:attribute name="CODING_RATE" use="required" type="xs:string"/>
+    <xs:attribute name="BB_FRAME_HEADER_LEN_bytes" use="required" type="xs:positiveInteger"/>
+    <xs:attribute name="BB_FRAME_USAGE_MODE" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NORMAL"/>
+          <xs:enumeration value ="SHORT"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="SYMBOL_RATE" use="required" type="xs:integer"/>
+    <xs:attribute name="BER_MODEL" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="FIXED"/>
+          <xs:enumeration value="FILE_BASED"/>
+          <xs:enumeration value="MODEL_BASED"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="BER" type="xs:double" use="optional"/>
+    <xs:attribute name="BER_FILE" type="xs:string" use="optional"/>
+    <xs:attribute name="MODULATION" type="MODULATION" use="required"/>
+  </xs:attributeGroup>
+
+  <xs:attributeGroup name="RETURN_LINK_PROPERTY">
+    <xs:attribute name ="ACCESS_PROTOCOL" use="required" fixed="MF-TDMA" type="xs:string"/>
+    <xs:attribute name="BAND" use="required" fixed="KA" type="xs:string"/>
+    <xs:attribute name="BASE_FREQUENCY_GHZ" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:double">
+          <xs:maxInclusive value="40.0"/>
+          <xs:minInclusive value="26.0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="CARRIER_BANDWIDTH_HZ" type="xs:double" use="required"/>
+    <xs:attribute name="ROLLOFF_FACTOR" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:maxInclusive value="1.0"/>
+          <xs:minInclusive value="0.0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="SPACING_FACTOR" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:maxInclusive value="1.0"/>
+          <xs:minInclusive value="0.0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="SLOT_COUNT_IN_FRAME" use="required" type="xs:double"/>
+    <xs:attribute name="FRAME_COUNT_IN_SUPERFRAME" use="required" type="xs:double"/>
+    <xs:attributeGroup ref="FRAME_BANDWIDTH_GROUP"/>
+
+    <xs:attribute name="SYMBOL_PER_SLOT" use="required" type="xs:double"/>
+    <xs:attribute name="PILOT_BLOCK_SIZE_symbols" use="required" type="xs:double"/>
+    <xs:attribute name="PILOT_BLOCK_INTERVAL_slots" use="required" type="xs:double"/>
+    <xs:attribute name="PLHEARDER_slots" use="required" type="xs:double"/>
+    <xs:attribute name="CODING_RATE" use="required" type="xs:string"/>
+    <xs:attribute name="BB_FRAME_HEADER_LEN_bytes" use="required" type="xs:double"/>
+    <xs:attribute name="BB_FRAME_USAGE_MODE" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NORMAL"/>
+          <xs:enumeration value ="SHORT"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="SYMBOL_RATE" use="required" type="xs:double"/>
+    <xs:attribute name="BER_MODEL" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="FIXED"/>
+          <xs:enumeration value="FILE_BASED"/>
+          <xs:enumeration value="MODEL_BASED"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="BER" type="xs:double" use="optional"/>
+    <xs:attribute name="BER_FILE" type="xs:string" use="optional"/>
+    <xs:attribute name="MODULATION" type="MODULATION" use="required"/>
+  </xs:attributeGroup>
+  
+  <xs:group name="SATELLITE_PHY_ELEMENT">
+    <xs:sequence>
+      <xs:element name="FORWARD" maxOccurs="1" minOccurs="0">
+        <xs:complexType>
+          <xs:attributeGroup ref="FORWARD_LINK_PROPERTY"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RETURN" maxOccurs="1" minOccurs="0">
+        <xs:complexType>
+          <xs:attributeGroup ref="RETURN_LINK_PROPERTY"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:group name="MARKOV_LOO_FADING_ELEMENT">
+    <xs:sequence>
+      <xs:element name="FADING" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ELEVATION" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="STATE" minOccurs="3" maxOccurs="3">
+                    <xs:complexType>
+                      <xs:attribute name="ID" type="xs:positiveInteger" use="required"/>
+                      <xs:attribute name="DirectSignalMean_DB" type="xs:double" use="required"/>
+                      <xs:attribute name="DirectSignalStdDeviation_DB" type="xs:double" use="required"/>
+                      <xs:attribute name="RMSMultipathPower_DB" type="xs:double" use="required"/>
+                      <xs:attribute name="NumberDirectSignalOscillators" type="xs:double" use="required"/>
+                      <xs:attribute name="NumberMultipathOscillator" type="xs:double" use="required"/>
+                      <xs:attribute name="DirectSignalDoppler_Hz" type="xs:double" use="required"/>
+                      <xs:attribute name="MultipathDoppler_HZ" type="xs:double" use="required"/>
+                      <xs:attribute name="InitialProbability" type="xs:double" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="STATE_TRANSITION_PROBABILITY">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="STATE" minOccurs="9" maxOccurs="9">
+                          <xs:complexType>
+                            <xs:attribute name="TO" type="xs:positiveInteger" use="required"/>
+                            <xs:attribute name="FROM" type="xs:positiveInteger" use="required"/>
+                            <xs:attribute name="PROBABILITY" type="xs:decimal" use="required"/>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="ID" type="xs:positiveInteger" fixed="1" use="required"/>
+                <xs:attribute name="STATE_COUNT" fixed="3" type="xs:positiveInteger" use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="ELEVATION_COUNT" fixed="1" type="xs:positiveInteger" use="required"/>
+          <xs:attribute name="COOLOFFPERIOD_MS" type="xs:double" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

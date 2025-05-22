@@ -1,0 +1,6 @@
+ProductName=NetSim
+VersionType=std
+VersionNumber=13.2.34 (64 Bit)
+WorkspaceName=v13.2std_Intrusion_Detection_System_Leach
+SrcIncluded=True
+Date=Oct 22 2022, 11:48:13 AM

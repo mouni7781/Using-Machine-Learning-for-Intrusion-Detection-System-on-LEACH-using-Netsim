@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NetSim_Common_type"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/NetSim_Common_type.xsd"
+    xmlns:mstns="http://tempuri.org/NetSim_Common_type.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:simpleType name="BOOL">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="TRUE"/>
+          <xs:enumeration value="FALSE"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[Tt][Rr][Uu][Ee]"/>
+          <xs:pattern value="[Ff][Aa][Ll][Ss][Ee]"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="TwoOption">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Enable"/>
+          <xs:enumeration value="Disable"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[Ee][Nn][Aa][Bb][Ll][Ee]"/>
+          <xs:pattern value="[Dd][Ii][Ss][Aa][Bb][Ll][Ee]"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="CHANNEL_CHARACTERISTICS">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="NO_PATHLOSS"/>
+        <xs:enumeration value="PATHLOSS_ONLY"/>
+        <xs:enumeration value="PATHLOSS_AND_SHADOWING"/>
+        <xs:enumeration value="PATHLOSS_AND_FADING_AND_SHADOWING"/>
+        <xs:enumeration value="PATHLOSS_WITH_SHADOWFADING"/>
+        <xs:enumeration value="PATHLOSS_WITH_SHADOWFADING_O2ILOSS"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+  <xs:attributeGroup name="BUFFER_SIZE">
+    <xs:attribute name="BUFFER_SIZE_GB" type="xs:double" use="optional"/>
+    <xs:attribute name="BUFFER_SIZE_MB" type="xs:double" use="optional"/>
+    <xs:attribute name="BUFFER_SIZE_KB" type="xs:double" use="optional"/>
+    <xs:attribute name="BUFFER_SIZE_B" type="xs:double" use="optional"/>
+    <xs:attribute name="BUFFER_SIZE_BITS" type="xs:double" use="optional"/>
+  </xs:attributeGroup>
+
+  <xs:simpleType name="MODULATION">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="QPSK"/>
+      <xs:enumeration value="8PSK"/>
+      <xs:enumeration value="16APSK"/>
+      <xs:enumeration value="16QAM"/>
+      <xs:enumeration value="32APSK"/>
+      <xs:enumeration value="64QAM"/>
+      <xs:enumeration value="256QAM"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="APP_PROTOCOL">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE"/>
+      <xs:enumeration value="RTP"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TRANSPORT_PROTOCOL">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE"/>
+      <xs:enumeration value="TCP"/>
+      <xs:enumeration value="UDP"/>
+      <xs:enumeration value="WSMP"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

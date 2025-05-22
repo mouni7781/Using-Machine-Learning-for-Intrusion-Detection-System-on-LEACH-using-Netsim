@@ -1,0 +1,6 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  BatteryModel.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+     Creating library ..\..\..\bin_x64\BatteryModel.lib and object ..\..\..\bin_x64\BatteryModel.exp
+  BatteryModel.vcxproj -> C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\BatteryModel.dll

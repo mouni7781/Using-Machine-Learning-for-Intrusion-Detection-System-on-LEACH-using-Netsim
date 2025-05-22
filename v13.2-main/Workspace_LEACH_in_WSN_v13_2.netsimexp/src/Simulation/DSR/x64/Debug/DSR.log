@@ -1,0 +1,72 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  CheckRouteFound.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  DSR.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\DSR.c(86,9): warning C4013: 'fn_NetSim_DSR_MaliciousNode' undefined; assuming extern returning int
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\DSR.c(138,8): warning C4013: 'fn_NetSim_DSR_MaliciousProcessSourceRouteOption' undefined; assuming extern returning int
+  Leach.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Leach.c(44,1): warning C4010: single-line comment contains line-continuation character
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Leach.c(45,1): warning C4010: single-line comment contains line-continuation character
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Leach.c(46,1): warning C4010: single-line comment contains line-continuation character
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Leach.c(94,12): warning C4013: 'fn_NetSim_LEACH_AssignClusterHead' undefined; assuming extern returning int
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Leach.c(121,16): warning C4013: 'fn_NetSim_LEACH_IdentifyCluster' undefined; assuming extern returning int
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Leach.c(77,12): warning C4101: 'nInterface': unreferenced local variable
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Leach.c(165,7): warning C4013: 'fn_NetSim_DSR_MaliciousNode' undefined; assuming extern returning int
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Leach.c(168,8): warning C4013: 'find_ip_in_blacklist' undefined; assuming extern returning int
+  MaintBuffer.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  Malicious.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  Network_Layer_Ack.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  PacketProcessing.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\PacketProcessing.c(36,2): warning C4013: 'fn_NetSim_LEACH_GetNextHop' undefined; assuming extern returning int
+  Pathrater.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Pathrater.c(62,6): warning C4101: 'n': unreferenced local variable
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Pathrater.c(71,6): warning C4101: 'n': unreferenced local variable
+  RouteCache.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  RouteError.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  RouteReply.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  RouteRequest.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  SendBuffer.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  SourceRoute.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\SourceRoute.c(64,6): warning C4013: 'fn_NetSim_LEACH_CheckDestination' undefined; assuming extern returning int
+  Generating Code...
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\DSR\Leach.c(196): warning C4715: 'fn_NetSim_LEACH_IdentifyCluster': not all control paths return a value
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1391,5): warning MSB8012: TargetPath(C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\DSR.dll) does not match the Linker's OutputFile property value (C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\libDSR.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1393,5): warning MSB8012: TargetName(DSR) does not match the Linker's OutputFile property value (libDSR). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+CheckRouteFound.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  List.lib(List.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+CheckRouteFound.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     Creating library ..\..\..\bin_x64\DSR.lib and object ..\..\..\bin_x64\DSR.exp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+List.lib(List.obj) : warning LNK4099: PDB 'List.pdb' was not found with 'List.lib(List.obj)' or at 'C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\List.pdb'; linking object as if no debug info
+DSR.lib(DSR.obj) : warning LNK4099: PDB 'DSRLib.pdb' was not found with 'DSR.lib(DSR.obj)' or at 'C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\DSRLib.pdb'; linking object as if no debug info
+DSR.lib(LinkLayerAck.obj) : warning LNK4099: PDB 'DSRLib.pdb' was not found with 'DSR.lib(LinkLayerAck.obj)' or at 'C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\DSRLib.pdb'; linking object as if no debug info
+  DSR.vcxproj -> C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\DSR.dll

@@ -1,0 +1,47 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  802_15_4.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  BackoffCalculation.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  BERCalculation.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  CCA.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  ChangeRadioState.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  LocateBackoffBoundary.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  SINRCalculation.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  SlottedCSMACA.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  Superframe.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  UnslottedCSMACA.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  Watchdog.c
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\Stack.h(833,29): warning C4091: ' ': ignored on left of '__int64 (__cdecl *)(stru_NetSim_EventDetails *,int,const char *)' when no variable is declared
+C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\src\Simulation\Include\main.h(180,205): warning C4028: formal parameter 5 different from declaration
+  Generating Code...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1391,5): warning MSB8012: TargetPath(C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\ZigBee.dll) does not match the Linker's OutputFile property value (C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\libZigBee.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1393,5): warning MSB8012: TargetName(ZigBee) does not match the Linker's OutputFile property value (libZigBee). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+802_15_4.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  Zigbee.lib(802_15_4_lib.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+802_15_4.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     Creating library ..\..\..\bin_x64\ZigBee.lib and object ..\..\..\bin_x64\ZigBee.exp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+Zigbee.lib(802_15_4_lib.obj) : warning LNK4099: PDB 'ZigbeeLib.pdb' was not found with 'Zigbee.lib(802_15_4_lib.obj)' or at 'C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\ZigbeeLib.pdb'; linking object as if no debug info
+List.lib(List.obj) : warning LNK4099: PDB 'List.pdb' was not found with 'List.lib(List.obj)' or at 'C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\List.pdb'; linking object as if no debug info
+  ZigBee.vcxproj -> C:\Users\mihit\Documents\NetSim\Workspaces\v13.2std_Intrusion_Detection_System_Leach\bin_x64\ZigBee.dll
